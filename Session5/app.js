@@ -16,3 +16,9 @@ const app = Vue.createApp({
 });
 
 app.mount('#app');
+
+const data = {
+  message: 'Hello!'
+  };
+
+const proxy = new Proxy(data);
