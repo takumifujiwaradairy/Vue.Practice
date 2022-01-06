@@ -11,7 +11,8 @@ const app = Vue.createApp({
     },
     removeGoal(idx){
       this.goals.splice(idx, 1);
-    }
+    },
+    addLogMessage(){}
   }
 });
 
