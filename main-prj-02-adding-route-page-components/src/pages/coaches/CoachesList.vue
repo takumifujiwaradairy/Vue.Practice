@@ -1,8 +1,8 @@
 <template>
   <section>
-    Filter
-  </section>
+    filter
+  </section>  
   <section>
-    LIST OF COACHES
+    List of Coaches
   </section>
 </template>
