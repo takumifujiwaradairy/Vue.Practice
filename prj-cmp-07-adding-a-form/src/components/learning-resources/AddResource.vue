@@ -1,4 +1,13 @@
 <template>
+  <base-dialog v-if="inputIsInvalid" title="Invalid Input">
+    <template #default>
+      <p>入力された値は、間違いでした！</p>
+      <p>確認して正しいメッセージをお願いします！</p>
+    </template>
+    <template actions>
+      <base-button @click=""></base-button>
+    </template>
+  </base-dialog>
   <base-card>
     <form @sumit.prevent="submitData">
       <div class="form-control">
@@ -20,16 +29,32 @@
   </base-card>
 </template>
 <script>
+import BaseButton from '../UI/BaseButton.vue';
+import BaseDialog from '../UI/BaseDialog.vue';
 export default {
+  components: { BaseButton },
   inject: ['addResource'],
+  da
+    BaseDialogta(){
+    return{
+      inputIsInvalid: false,
+    }
+  },
   methods:{
     submitData(){
       const enteredTitle = this.$refs.titleInput.value;
       const enteredDescripition = this.$refs.descInput.value;
       const enteredUrl = this.$refs.linkInput.value;  
       
+      if(enteredTitle.trim() === '' || enteredDescripition.trim() === '' ||enteredUrl.trim() === ''){
+        this.inputIsInvalid = true;
+        return;
+      }
       this.addResource(enteredTitle,enteredDescripition,enteredUrl);
-    }
+    },
+    confirmError(){
+      
+    },
   }
 }
 </script>
