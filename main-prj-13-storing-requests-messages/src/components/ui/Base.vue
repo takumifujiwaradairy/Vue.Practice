@@ -1,0 +1,13 @@
+vscodeのsetting.jsonにｋれを追加すれば、
+vvとjjが使えるようになりますので。
+入れてください！vvvvscodeのsetting.jsonにｋれを追加すれば、
+vvとjjが使えるようになりますので。
+入れてください！scodeのsetting.jsonにｋれを追加すれば、
+vvとjjが使えるようになりますので。
+入れてください！scodeのsetting.jsonにｋれを追加すれば、
+vvとjjが使えるようになりますので。
+入れてください！scodeのsetting.jsonにｋれを追加すれば、
+vvとjjが使えるようになりますので。
+入れてください！vscodeのsetting.jsonにｋれを追加すれば、
+vvとjjが使えるようになりますので。
+入れてください！
