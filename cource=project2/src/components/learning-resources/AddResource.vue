@@ -1,4 +1,15 @@
 <template>
+  <base-dailog v-if="inputIsInvalid" title="Invalid input" @close="confirmError">
+    <template #default>
+      <p> Unfortunately,at least one inout value is invalid</p>
+      <p>Please check </p>
+    </template>
+    <template #actions>
+      <base-button @click="confirmError">
+        OK
+      </base-button>  
+    </template>
+  </base-dailog>
   <base-card>
     <form @sumit.prevent="submitData">
       <div>
@@ -21,17 +32,31 @@
 </template>
 
 <script>
+import BaseDailog from '../UI/BaseDailog.vue';
 export default {
+  components: { BaseDailog },
   inject: ['addResource'],
+  data(){
+    return{
+      inputIsInvalid: false,   
+    }
+  },
   methods:{
     submitData(){
       const enteredTitle = this.$refs.titleInput.value;
       const enteredDescripition = this.$refs.descInput.value;
       const enteredUrl = this.$refs.urlInput.value;   
 
+      if(enteredTitle.trim() === ''|| enteredDescripition.trim() === ''|| enteredUrl.trim() === ''){
+        this.inputIsInvalid = false;
+       return; 
+      }
       this.addResource( enteredTitle,enteredDescripition,enteredUrl );
+    },
+    confirmError(){
+      this.inputIsInvalid = false;
     }
-  }
+  },
 }
 </script>
 
