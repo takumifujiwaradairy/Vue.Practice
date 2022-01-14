@@ -14,29 +14,28 @@
   </head>
   <body>
     <header>
-      <h1>Monster Slayer</h1>
+      <ｊh1>Monster Slayer</h1>
     </header>
-    <div id="game">
+    <div id="game">Course Project1.
       <section id="monster" class="container">
         <h2>Monster Health</h2>
         <div class="healthbar">
-          <div class="healthbar__value"></div>
+         
         </div>
       </section>
       <section id="player" class="container">
         <h2>Your Health</h2>
         <div class="healthbar">
-          <div class="healthbar__value"></div>
+          <div class="healthbar__value" :style="playerBarStyles"></div>
         </div>
       </section>
       <section>
-        <h2>Game Over!</h2>
-        
+
       </section>
       <section id="controls">
         <button @click="attackMonster">ATTACK</button>
         <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">SPECIAL ATTACK</button>
-        <button `click="healPlayer">HEAL</button>
+        <button>HEAL</button>
         <button>SURRENDER</button>
       </section>
       <section id="log" class="container">
